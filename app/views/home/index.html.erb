@@ -1,0 +1,15 @@
+
+
+<h1>New list page</h1>
+<a href='/home/new'>Write</a>
+<br><br>
+
+<%Post.all.each do |x| %> #루비코드 안에 =이 없으면 실제 결과물에 보이지 않음. 보여주지 않으려면 = 없어도 됨.
+    제목: <%=x.title%><br><br> #br은 엔터
+    내용: <%=x.content%>
+    <a href='/home/destory/<%=x.id%>'>삭제</a>
+    <a href='/home/edit/<%=x.id%>'>수정</a>
+
+    <br>
+    ------------------------<br>
+<% end %> #마지막 줄에 닿을 때 까지 반복하게 함.
